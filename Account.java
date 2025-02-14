@@ -11,6 +11,64 @@ public class Account {
         this.accountHolderName = accountHolderName;
         this.accountType = accountType;
 
+        public String getAccountNumber() {
+            return accountNumber;
+        }
+    
+        public void setAccountNumber(String accountNumber) {
+            this.accountNumber = accountNumber;
+        }
+    
+        public String getAccountHolderName() {
+            return accountHolderName;
+        }
+    
+        public void setAccountHolderName(String accountHolderName) {
+            this.accountHolderName = accountHolderName;
+        }
+    
+        public double getBalance() {
+            return balance;
+        }
+    
+        public void setBalance(double balance) {
+            this.balance = balance;
+        }
+    
+        public String getAccountType() {
+            return accountType;
+        }
+    
+        public void setAccountType(String accountType) {
+            if (accountType.equals("Savings") || accountType.equals("Current")) {
+                this.accountType = accountType;
+            }else {
+                System.out.println("Invalid account type. Must be 'Savings' or" +
+                        "'Current'");
+            }
+        }
+    
+        public void deposit (double amount){
+            if (amount > 0){
+                balance +=amount;
+                System.out.println("Deposit successful. New balance: " + balance);
+            }else{
+                System.out.println("Invalid deposit amount");
+            }
+        }
+    
+        public void withdraw (double amount){
+            if (amount <= balance){
+                balance -= amount;
+                System.out.println("Withdrawal successful. Remaining balance: " + balance);
+            }else {
+                System.out.println("Insufficient balance");
+            }
+        }
+    
+    
+    }
+
 }
 
 class Main {
