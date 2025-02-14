@@ -4,6 +4,13 @@ public class Account {
     private double balance;
     private String accountType;
 
+
+    public Account(String accountNumber, double balance, String accountHolderName, String accountType) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.accountHolderName = accountHolderName;
+        this.accountType = accountType;
+
 }
 
 class Main {
