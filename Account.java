@@ -74,5 +74,8 @@ public class Account {
 class Main {
     public static void main(String[] args) {
         System.out.println("I finally got Java in Visual studio code");
+
+        Account acc = new Account("526362366",3.57,"Collins", "reciever");
+        // acc is one of the account from the Account class
     }
 }
