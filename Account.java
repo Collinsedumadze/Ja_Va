@@ -4,11 +4,8 @@ public class Account {
     private double balance;
     private String accountType;
 
-    public Account(String accountNumber, double balance, String accountHolderName, String accountType) {
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-        this.accountHolderName = accountHolderName;
-        this.accountType = accountType;
+    public Account() {
+
     }
 
     public String getAccountNumber() {
@@ -70,7 +67,14 @@ class Main {
     public static void main(String[] args) {
         System.out.println("I finally got Java in Visual Studio Code");
 
-        Account acc = new Account("526362366", 3.57, "Collins", "reciever");
-        // acc is one of the accounts from the Account class
+        Account acc = new Account();
+        Account acc1 = new Account();
+        Account acc2 = new Account();
+        Account acc3 = new Account();
+        Account acc4 = new Account();
+        System.out.println(acc.getAccountNumber());
+        System.out.println(acc4.getAccountNumber());
+        System.out.println(acc2.getAccountHolderName());
+        
     }
 }
